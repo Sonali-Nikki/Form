@@ -46,7 +46,7 @@ function displayRecords() {
         tableBody.appendChild(row);
     });
 
-    // Dynamically adding a vertical scrollbar
+   
     const recordsSection = document.getElementById('studentRecords');
     if (students.length > 5) {
         recordsSection.style.overflowY = 'scroll';
@@ -69,7 +69,7 @@ function editRecord(index) {
     document.getElementById('email').value = student.email;
     document.getElementById('contact').value = student.contact;
 
-    deleteRecord(index);  // Delete the old record, so it can be updated
+    deleteRecord(index);  
 }
 
 window.onload = displayRecords;
@@ -77,7 +77,7 @@ window.onload = displayRecords;
 
 
 
-// Function to display all student records
+
 function displayRecords() {
     const students = JSON.parse(localStorage.getItem('students')) || [];
     const tableBody = document.querySelector('#recordsTable tbody');
@@ -98,7 +98,7 @@ function displayRecords() {
         tableBody.appendChild(row);
     });
 
-    // Dynamically adding a vertical scrollbar if there are more than 5 records
+    
     const recordsSection = document.getElementById('studentRecords');
     if (students.length > 5) {
         recordsSection.style.overflowY = 'scroll';
